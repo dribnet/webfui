@@ -4,6 +4,7 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [webfui "0.2.1"]
                  [noir "1.3.0-beta10"]
+                 [com.keminglabs/c2 "0.2.1"]
                  [hiccup "1.0.1"]]
   :min-lein-version "2.0.0"
   :main webfui-examples.server
@@ -13,6 +14,10 @@
                                          :compiler {:output-to "resources/public/js/add_two_numbers.js"
                                                     :optimizations :whitespace
                                                     :pretty-print true}}
+                       :clocky {:source-path "src-cljs/clocky"
+                                        :compiler {:output-to "resources/public/js/clocky.js"
+                                                   :optimizations :whitespace
+                                                   :pretty-print true}}
                        :add_two_numbers_low_level {:source-path "src-cljs/add_two_numbers_low_level"
                                                    :compiler {:output-to "resources/public/js/add_two_numbers_low_level.js"
                                                               :optimizations :whitespace
