@@ -14,7 +14,7 @@
   [:svg
     [:g {:transform "translate(300,300)rotate(-90)"}
       ; (state is map where each field is a percentage)
-      (doall (for [k [:hours :minutes :seconds :millis]]
+      (for [k [:hours :minutes :seconds :millis]]
         (let [v      (get state k)
               angle1 (/ (* Tau v) 100)
               angle2 (+ angle1 Pi)
@@ -28,7 +28,7 @@
             [:path {:class (str (name k) "2")
                     :d (arc :outer-radius radius
                             :start-angle angle2
-                            :end-angle   angle3)}]])))]])
+                            :end-angle   angle3)}]]))]])
 
 (defn update-clock [clock-atom]
   "updates atom with new percentage values based on js/Date fields"
